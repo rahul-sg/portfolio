@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
     <title>Rahul Sengupta: Personal site and portfolio</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around; /* Distribute links evenly */
+            background-color: #f8f8f8; /* Light background */
+            padding: 1em 0; /* Add some vertical padding */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333; /* Darker text color */
+            flex: 1; /* Make each link take equal space */
+            text-align: center; /* Center align text */
+        }
+
+        nav a.current {
+            font-weight: bold; /* Highlight the current link */
+            color: #007acc; /* Accent color for active link */
+        }
+    </style>
+</head>
+<body style="margin-inline: max(1em, (100% - 100ch) / 2);
+             max-width: 100ch;">
     <nav>
         <a href="https://rahul-sg.github.io/portfolio/">Portfolio</a> |
         <a href="https://rahul-sg.github.io/portfolio/projects/">Projects</a> |
@@ -13,9 +36,6 @@
       </nav>
     <h1>Rahul Sengupta</h1>
     <p>Hi! My name is Rahul and I am a 3rd year Data Science major at UC San Diego. I am minoring in Finance and hope to take on jobs related to the finance field in the future. I enjoy watching and playing sports like football and basketball and hanging out with my friends.</p>
-</head>
-<body style="margin-inline: max(1em, (100% - 100ch) / 2);
-             max-width: 100ch;">
     <img id="LeGoatPic" src="images/legoat.png" alt="This is an image of the greatest basketball player ever LeBron Raymone James Sr. (GOAT)"/>
 </body>
 </html>
