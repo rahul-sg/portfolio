@@ -8,21 +8,29 @@
     <style>
         nav {
             display: flex;
-            justify-content: space-around; /* Distribute links evenly */
-            background-color: #f8f8f8; /* Light background */
-            padding: 1em 0; /* Add some vertical padding */
+            justify-content: space-around;
+            background-color: #f8f8f8;
+            padding: 1em 0;
+            margin-bottom: 1em;
+            border-bottom: 1px solid hsl(0, 0%, 80%);
         }
 
         nav a {
             text-decoration: none;
-            color: #333; /* Darker text color */
-            flex: 1; /* Make each link take equal space */
-            text-align: center; /* Center align text */
+            color: inherit;
+            text-align: center;
+            padding: 0.5em 1em;
+        }
+
+        nav a:hover {
+            color: #007acc;
         }
 
         nav a.current {
-            font-weight: bold; /* Highlight the current link */
-            color: #007acc; /* Accent color for active link */
+            font-weight: bold;
+            color: #007acc;
+            border-bottom: 0.4em solid hsl(0, 0%, 80%);
+            padding-bottom: calc(0.5em - 0.4em);
         }
     </style>
 </head>
