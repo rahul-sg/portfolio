@@ -4,15 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Sengupta: Projects</title>
-    <h1>Projects</h1>
-    <nav>
-        <a href="https://rahul-sg.github.io/portfolio/">Portfolio</a> |
-        <a href="https://rahul-sg.github.io/portfolio/projects/">Projects</a> |
-        <a href="https://rahul-sg.github.io/portfolio/contact/">Contact</a> |
-        <a href="https://rahul-sg.github.io/portfolio/resume/">Resume</a> | 
-      </nav>
+    <style>
+        :root {
+            --color-accent: hsl(210, 65%, 50%);
+            --hover-background: hsl(210, 65%, 95%);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f8f8f8;
+            padding: 1em 0;
+            margin-bottom: 1em;
+            border-bottom: 1px solid hsl(0, 0%, 80%);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            padding: 0.5em 1em;
+            font-family: Arial, sans-serif;
+            font-size: 1em;
+            transition: background-color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--hover-background);
+            border-bottom: 0.3em solid var(--color-accent);
+        }
+
+        nav a.current {
+            font-weight: bold;
+            color: var(--color-accent);
+            border-bottom: 0.3em solid var(--color-accent);
+            padding-bottom: calc(0.5em - 0.3em);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    
+    <nav>
+        <a href="https://rahul-sg.github.io/portfolio/">Portfolio</a>
+        <a href="https://rahul-sg.github.io/portfolio/projects/" class="current">Projects</a>
+        <a href="https://rahul-sg.github.io/portfolio/contact/">Contact</a>
+        <a href="https://rahul-sg.github.io/portfolio/resume/">Resume</a>
+    </nav>
+
+    <h1>Projects</h1>
 </body>
 </html>
