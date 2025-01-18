@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Rahul Sengupta: Personal site and portfolio</title>
     <style>
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             background-color: #f8f8f8;
             padding: 1em 0;
             margin-bottom: 1em;
@@ -20,6 +20,8 @@
             color: inherit;
             text-align: center;
             padding: 0.5em 1em;
+            font-family: Arial, sans-serif;
+            font-size: 1em;
         }
 
         nav a:hover {
@@ -29,13 +31,36 @@
         nav a.current {
             font-weight: bold;
             color: #007acc;
-            border-bottom: 0.4em solid hsl(0, 0%, 80%);
-            padding-bottom: calc(0.5em - 0.4em);
+            border-bottom: 0.3em solid #007acc;
+            padding-bottom: calc(0.5em - 0.3em);
+        }
+
+        body {
+            margin-inline: max(1em, (100% - 100ch) / 2);
+            max-width: 100ch;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 1.5em auto;
         }
     </style>
 </head>
-<body style="margin-inline: max(1em, (100% - 100ch) / 2);
-             max-width: 100ch;">
+<body>
     <nav>
         <a href="https://rahul-sg.github.io/portfolio/">Portfolio</a> |
         <a href="https://rahul-sg.github.io/portfolio/projects/">Projects</a> |
