@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Rahul Sengupta: Personal site and portfolio</title>
     <style>
+        :root {
+            --color-accent: hsl(210, 65%, 50%);
+            --hover-background: hsl(210, 65%, 95%);
+        }
+
         nav {
             display: flex;
             justify-content: center;
@@ -22,21 +27,19 @@
             padding: 0.5em 1em;
             font-family: Arial, sans-serif;
             font-size: 1em;
+            transition: background-color 0.3s ease, border-bottom 0.3s ease;
         }
 
         nav a:hover {
-            color: #007acc;
+            background-color: var(--hover-background);
+            border-bottom: 0.3em solid var(--color-accent);
         }
 
         nav a.current {
             font-weight: bold;
-            color: #007acc;
-            border-bottom: 0.3em solid #007acc;
+            color: var(--color-accent);
+            border-bottom: 0.3em solid var(--color-accent);
             padding-bottom: calc(0.5em - 0.3em);
-        }
-
-        nav a + a::before {
-            content: "";
         }
 
         body {
