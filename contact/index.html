@@ -10,6 +10,7 @@
             --hover-background: hsl(210, 65%, 95%);
         }
 
+        /* Navigation bar */
         nav {
             display: flex;
             justify-content: center;
@@ -60,21 +61,28 @@
         }
 
         label {
-            display: flex;
-            flex-direction: column;
+            display: block;
+            margin-block: 0.5em;
+            font-weight: bold;
             font-size: 1em;
         }
 
-        input, textarea {
-            margin-top: 0.5em;
-            padding: 0.5em;
+        input, textarea, button {
+            font-family: inherit;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.7em;
             font-size: 1em;
             border: 1px solid hsl(0, 0%, 80%);
             border-radius: 4px;
         }
 
+        textarea {
+            resize: vertical;
+        }
+
         button {
-            padding: 0.7em;
             background-color: var(--color-accent);
             color: white;
             font-size: 1em;
@@ -97,21 +105,18 @@
         <a href="https://rahul-sg.github.io/portfolio/resume/">Resume</a>
     </nav>
 
-    <h1>Contacts</h1>
+    <h1>Contact me</h1>
     <form action="mailto:rasengupta@ucsd.edu" method="post" enctype="text/plain">
-        <label>
-            Email
-            <input name="email" type="email" required>
-        </label>
-        <label>
-            Subject
-            <input name="subject" type="text" required>
-        </label>
-        <label>
-            Body
-            <textarea name="body" rows="5" required></textarea>
-        </label>
-        <button type="submit">Submit</button>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" required>
+
+        <label for="body">Message</label>
+        <textarea id="body" name="body" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
     </form>
 </body>
 </html>
