@@ -3,64 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <script type="module" src="../global.js"></script>
     <title>Rahul Sengupta: Projects</title>
     <style>
-        :root {
-            --color-accent: hsl(210, 65%, 50%);
-            --hover-background: hsl(210, 65%, 95%);
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #f8f8f8;
-            padding: 1em 0;
-            margin-bottom: 1em;
-            border-bottom: 1px solid hsl(0, 0%, 80%);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: inherit;
-            text-align: center;
-            padding: 0.5em 1em;
-            font-family: Arial, sans-serif;
-            font-size: 1em;
-            transition: background-color 0.3s ease, border-bottom 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: var(--hover-background);
-            border-bottom: 0.3em solid var(--color-accent);
-        }
-
-        nav a.current {
-            font-weight: bold;
-            color: var(--color-accent);
-            border-bottom: 0.3em solid var(--color-accent);
-            padding-bottom: calc(0.5em - 0.3em);
-        }
-
         body {
+            margin-inline: max(1em, (100% - 100ch) / 2);
+            max-width: 100ch;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
         }
-
+    
         h1 {
             font-size: 2em;
             margin-bottom: 0.5em;
-            color: #333;
         }
-
+    
+        p {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+        }
+    
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 1.5em auto;
+        }
+    
         .projects {
             display: grid;
             grid-template-rows: subgrid;
             grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
             gap: 1em;
         }
-
+    
         .projects article {
             display: grid;
             grid-row: span 3;
@@ -71,62 +48,51 @@
             background-color: #fff;
             text-align: center;
         }
-
+    
         .projects img {
             max-width: 100%;
             height: auto;
             border-radius: 4px;
             margin-bottom: 1em;
         }
-
+    
         .projects h2 {
             font-size: 1.2em;
             margin: 0;
         }
-
+    
         .projects p {
             font-size: 1em;
             color: #555;
         }
-
+    
         h1, h2, h3, h4, h5, h6 {
             line-height: 1.1;
             text-wrap: balance;
         }
-
+    
         h1 {
             font-size: 2.5em;
         }
-
+    
         h2 {
             margin: 0.5em 0;
         }
-
-        .projects {
-            article {
-                &:hover {
-                    border-color: var(--color-accent);
-                }
-
-                h2 {
-                    color: var(--color-accent);
-                }
-
-                p {
-                    color: #333;
-                }
-            }
+    
+        .projects article:hover {
+            border-color: var(--color-accent);
+        }
+    
+        .projects article h2 {
+            color: var(--color-accent);
+        }
+    
+        .projects article p {
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="https://rahul-sg.github.io/portfolio/">Portfolio</a>
-        <a href="https://rahul-sg.github.io/portfolio/projects/" class="current">Projects</a>
-        <a href="https://rahul-sg.github.io/portfolio/contact/">Contact</a>
-        <a href="https://rahul-sg.github.io/portfolio/resume/">Resume</a>
-    </nav>
-
     <h1>My Projects</h1>
     <section class="projects">
         <article>
