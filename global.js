@@ -1,14 +1,10 @@
 console.log("IT'S ALIVE!");
 
-// Detect if the site is running on GitHub Pages
-const isGithubPages = location.hostname === "rahul-sg.github.io";
-const BASE_URL = isGithubPages ? "/portfolio" : ""; // No trailing slash
-
 const pages = [
-    { url: "/", title: "Home" },
-    { url: "/projects/", title: "Projects" },
-    { url: "/contact/", title: "Contact" },
-    { url: "/resume/", title: "Resume" },
+    { url: "./", title: "Home" },
+    { url: "./projects/", title: "Projects" },
+    { url: "./contact/", title: "Contact" },
+    { url: "./resume/", title: "Resume" },
     { url: "https://github.com/rahul-sg", title: "GitHub" },
 ];
 
@@ -16,17 +12,17 @@ const pages = [
 const nav = document.createElement("nav");
 document.body.prepend(nav);
 
-for (let p of pages) {
-    let fullPath = p.url;
+const ARE_WE_HOME = document.documentElement.classList.contains("home");
 
-    // Ensure BASE_URL is only prepended on GitHub Pages and not duplicated
-    if (isGithubPages && !fullPath.startsWith(BASE_URL) && !fullPath.startsWith("http")) {
-        fullPath = BASE_URL + fullPath;
-    }
+for (let p of pages) {
+    let url = p.url;
+    let title = p.title;
+
+    url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url : url;
 
     const a = document.createElement("a");
-    a.href = fullPath;
-    a.textContent = p.title;
+    a.href = url;
+    a.textContent = title;
 
     a.classList.toggle(
         "current",
@@ -64,6 +60,7 @@ function setColorScheme(theme) {
     localStorage.setItem("theme", theme);
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const themeSelect = document.getElementById("theme-select");
     const savedTheme = localStorage.getItem("theme") || "auto";
@@ -78,16 +75,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 export async function fetchJSON(url) {
     try {
+        // Fetch the JSON file from the given URL
         const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
-            console.log(response);
+            console.log(response)
         }
 
-        return await response.json();
+        const data = await response.json();
+        return data;
+
+
     } catch (error) {
-        console.error("Error fetching or parsing JSON data:", error);
+        console.error('Error fetching or parsing JSON data:', error);
     }
 }
 
@@ -95,11 +96,11 @@ export async function fetchGithubData(username) {
     return fetchJSON(`https://api.github.com/users/${username}`);
 }
 
-export function renderProjects(project, containerElement, headingLevel = "h2") {
-    containerElement.innerHTML = "";
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+    containerElement.innerHTML = '';
 
-    project.forEach((item) => {
-        const article = document.createElement("article");
+    project.forEach(item => {
+        const article = document.createElement('article');
         article.innerHTML = `
             <${headingLevel}>${item.title}</${headingLevel}>
             <img src="${item.image}" alt="${item.title}">
@@ -109,4 +110,6 @@ export function renderProjects(project, containerElement, headingLevel = "h2") {
 
         containerElement.appendChild(article);
     });
+
+    
 }
