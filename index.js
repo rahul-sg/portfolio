@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         // ✅ Fetch GitHub Data (correctly waiting for it)
-        const githubData = await fetchGithubData('giorgianicolaou');
+        const githubData = await fetchGithubData('rahul-sg');
 
         if (githubData) {
             console.log("GitHub Data Fetched:", githubData); // Debugging output
