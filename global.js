@@ -1,10 +1,12 @@
 console.log("IT'S ALIVE!");
+const isGithubPages = location.hostname === "rahul-sg.github.io";
+const BASE_URL = isGithubPages ? "/portfolio/" : "/";
 
 const pages = [
-    { url: "./", title: "Home" },
-    { url: "./projects/", title: "Projects" },
-    { url: "./contact/", title: "Contact" },
-    { url: "./resume/", title: "Resume" },
+    { url: `${BASE_URL}`, title: "Home" },
+    { url: `${BASE_URL}projects/`, title: "Projects" },
+    { url: `${BASE_URL}contact/`, title: "Contact" },
+    { url: `${BASE_URL}resume/`, title: "Resume" },
     { url: "https://github.com/rahul-sg", title: "GitHub" },
 ];
 
