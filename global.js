@@ -1,10 +1,10 @@
 console.log("IT'S ALIVE!");
 
 const pages = [
-    { url: "", title: "Home" },
-    { url: "projects/", title: "Projects" },
-    { url: "contact/", title: "Contact" },
-    { url: "resume/", title: "Resume" },
+    { url: "./", title: "Home" },
+    { url: "./projects/", title: "Projects" },
+    { url: "./contact/", title: "Contact" },
+    { url: "./resume/", title: "Resume" },
     { url: "https://github.com/rahul-sg", title: "GitHub" },
 ];
 
