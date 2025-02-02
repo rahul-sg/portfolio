@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="global.js"></script>
+    <script src="index.js" type="module" defer></script>
     <title>Rahul Sengupta: Personal site and portfolio</title>
     <style>
         body {
@@ -30,11 +31,71 @@
             height: auto;
             margin: 1.5em auto;
         }
+
+        .projects {
+            display: grid;
+            grid-template-rows: subgrid;
+            grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+            gap: 1em;
+        }
+    
+        .projects article {
+            display: grid;
+            grid-row: span 3;
+            gap: 1em;
+            border: 1px solid hsl(0, 0%, 80%);
+            border-radius: 8px;
+            padding: 1em;
+            background-color: #fff;
+            text-align: center;
+        }
+    
+        .projects h2 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        
+        .projects article:hover {
+            border-color: var(--color-accent);
+        }
+    
+        .projects article h2 {
+            color: var(--color-accent);
+        }
+    
+        .projects article p {
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <h1>Rahul Sengupta</h1>
     <p>Hi! My name is Rahul and I am a 3rd year Data Science major at UC San Diego. I am minoring in Finance and hope to take on jobs related to the finance field in the future. I enjoy watching and playing sports like football and basketball and hanging out with my friends.</p>
-    <img id="LeGoatPic" src="images/legoat.png" alt="This is an image of the greatest basketball player ever LeBron Raymone James Sr. (GOAT)" />
+    <img id="LeGoatPic" src="images/legoat.jpg" alt="This is an image of the greatest basketball player ever LeBron Raymone James Sr. (GOAT)" />
+    <div id="profile-stats">
+        <h2>My GitHub Stats</h2>
+        <dl>
+            <div>
+                <dt>FOLLOWERS</dt>
+                <dd id="followers">Loading...</dd>
+            </div>
+            <div>
+                <dt>FOLLOWING</dt>
+                <dd id="following">Loading...</dd>
+            </div>
+            <div>
+                <dt>PUBLIC REPOS</dt>
+                <dd id="public-repos">Loading...</dd>
+            </div>
+            <div>
+                <dt>PUBLIC GISTS</dt>
+                <dd id="public-gists">Loading...</dd>
+            </div>
+        </dl>
+    </div>
+    <section></section>
+    <div class="projects">
+        <!-- Dynamically added content will appear here -->
+    </div>
 </body>
 </html>

@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Recipes.com Analysis",
+        "image": "https://www.mango.org/wp-content/themes/mango-child/css/img/recipe-header-mobile.png",
+        "description": "Developed a recipe recommendation model based on cook time, achieving 72.5% accuracy. Conducted hyperparameter tuning, improving accuracy by 6.5%.",
+        "link": "https://rahul-sg.github.io/recipes-ratings-analysis"
+    },
+    {
+        "title": "FortuNBA Projections",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Built an NBA player statistics prediction tool using K-Nearest-Neighbors, achieving a prediction accuracy of 65% within +/- 7.5% of actual stats.",
+        "link": "https://github.com/rahul-sg/FortuNBA"
+    },
+    {
+        "title": "Asperiores rem repellendus doloremque.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Dolore tenetur odio suscipit exercitationem."
+    },
+    {
+        "title": "Laudantium reprehenderit placeat perspiciatis.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Et nemo consectetur consequatur expedita."
+    },
+    {
+        "title": "Consequuntur autem eos facere.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Suscipit vero labore consequatur doloribus."
+    },
+    {
+        "title": "Quos sint quaerat omnis?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Aut magnam ex, quis deserunt!"
+    }
+]

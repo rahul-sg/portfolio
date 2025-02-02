@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script type="module" src="../global.js"></script>
+    <script src="../global.js" type="module"></script>
+    <script src="projects.js" type="module"></script>
     <title>Rahul Sengupta: Projects</title>
     <style>
         body {
@@ -49,22 +51,11 @@
             text-align: center;
         }
     
-        .projects img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 1em;
-        }
-    
         .projects h2 {
             font-size: 1.2em;
             margin: 0;
         }
     
-        .projects p {
-            font-size: 1em;
-            color: #555;
-        }
     
         h1, h2, h3, h4, h5, h6 {
             line-height: 1.1;
@@ -93,38 +84,9 @@
     </style>
 </head>
 <body>
-    <h1>My Projects</h1>
-    <section class="projects">
-        <article>
-            <h2>Lorem ipsum dolor sit.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Image coming soon">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </article>
-        <article>
-            <h2>Architecto minima sed omnis?</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Image coming soon">
-            <p>Adipisci quam non totam animi delectus magni.</p>
-        </article>
-        <article>
-            <h2>Asperiores rem repellendus doloremque.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Image coming soon">
-            <p>Dolore tenetur odio suscipit exercitationem.</p>
-        </article>
-        <article>
-            <h2>Laudantium reprehenderit placeat perspiciatis.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Image coming soon">
-            <p>Et nemo consectetur consequatur expedita.</p>
-        </article>
-        <article>
-            <h2>Consequuntur autem eos facere.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Image coming soon">
-            <p>Suscipit vero labore consequatur doloribus.</p>
-        </article>
-        <article>
-            <h2>Quos sint quaerat omnis?</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Image coming soon">
-            <p>Aut magnam ex, quis deserunt!</p>
-        </article>
-    </section>
+    <h1 class="projects-title"><span id="project-count">0</span> Projects </h1>
+    <div class="projects">
+        <!-- Dynamically added content will appear here -->
+    </div>
 </body>
 </html>
