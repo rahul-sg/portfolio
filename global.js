@@ -1,18 +1,14 @@
 console.log("IT'S ALIVE!");
 
-const isGithubPages = window.location.hostname.includes("github.io");
-const basePath = isGithubPages ? "/portfolio" : "";
-
-function cleanPath(path) {
-    return path.replace(/\/{2,}/g, "/");
-}
+const isGithubPages = location.hostname === "rahul-sg.github.io";
+const BASE_URL = isGithubPages ? "/portfolio/" : "";
 
 const pages = [
-    { url: `${basePath}/`, title: "Home" },
-    { url: `${basePath}/projects/`, title: "Projects" },
-    { url: `${basePath}/contact/`, title: "Contact" },
-    { url: `${basePath}/resume/`, title: "Resume" },
-    { url: "https://github.com/rahul-sg", title: "GitHub" }
+    { url: `${BASE_URL}`, title: "Home" },
+    { url: `${BASE_URL}projects/`, title: "Projects" },
+    { url: `${BASE_URL}contact/`, title: "Contact" },
+    { url: `${BASE_URL}resume/`, title: "Resume" },
+    { url: "https://github.com/rahul-sg", title: "GitHub" },
 ];
 
 // Create navigation menu
@@ -25,7 +21,7 @@ for (let p of pages) {
     let url = p.url;
     let title = p.title;
 
-    url = !ARE_WE_HOME && !url.startsWith("http") ? `${basePath}${url}`.replace(/\/{2,}/g, "/") : url;
+    url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url : url;
 
     const a = document.createElement("a");
     a.href = url;

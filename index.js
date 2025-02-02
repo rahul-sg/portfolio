@@ -3,9 +3,7 @@ import { fetchJSON, renderProjects, fetchGithubData } from './global.js';
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         // Fetch latest projects
-        const isGithubPages = window.location.hostname.includes("github.io");
-        const basePath = isGithubPages ? "/portfolio" : "";
-        const projects = await fetchJSON(`${basePath}/lib/projects.json`);
+        const projects = await fetchJSON('./lib/projects.json');
         const latestProjects = projects.slice(0, 3);
         const projectsContainer = document.querySelector('.projects');
 
