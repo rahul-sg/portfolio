@@ -1,11 +1,18 @@
 console.log("IT'S ALIVE!");
 
+const isGithubPages = window.location.hostname.includes("github.io");
+const basePath = isGithubPages ? "/portfolio" : "";
+
+function cleanPath(path) {
+    return path.replace(/\/{2,}/g, "/");
+}
+
 const pages = [
-    { url: "./", title: "Home" },
-    { url: "./projects/", title: "Projects" },
-    { url: "./contact/", title: "Contact" },
-    { url: "./resume/", title: "Resume" },
-    { url: "https://github.com/rahul-sg", title: "GitHub" },
+    { url: `${basePath}/`, title: "Home" },
+    { url: `${basePath}/projects/`, title: "Projects" },
+    { url: `${basePath}/contact/`, title: "Contact" },
+    { url: `${basePath}/resume/`, title: "Resume" },
+    { url: "https://github.com/rahul-sg", title: "GitHub" }
 ];
 
 // Create navigation menu
@@ -18,7 +25,7 @@ for (let p of pages) {
     let url = p.url;
     let title = p.title;
 
-    url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url : url;
+    url = !ARE_WE_HOME && !url.startsWith("http") ? `${basePath}${url}`.replace(/\/{2,}/g, "/") : url;
 
     const a = document.createElement("a");
     a.href = url;
