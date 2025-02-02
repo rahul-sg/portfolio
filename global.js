@@ -1,12 +1,13 @@
 console.log("IT'S ALIVE!");
+
 const isGithubPages = location.hostname === "rahul-sg.github.io";
-const BASE_URL = isGithubPages ? "/portfolio/" : "/";
+const BASE_URL = isGithubPages ? "/portfolio" : ""; // No trailing slash
 
 const pages = [
-    { url: `${BASE_URL}`, title: "Home" },
-    { url: `${BASE_URL}projects/`, title: "Projects" },
-    { url: `${BASE_URL}contact/`, title: "Contact" },
-    { url: `${BASE_URL}resume/`, title: "Resume" },
+    { url: "/", title: "Home" },
+    { url: "/projects/", title: "Projects" },
+    { url: "/contact/", title: "Contact" },
+    { url: "/resume/", title: "Resume" },
     { url: "https://github.com/rahul-sg", title: "GitHub" },
 ];
 
@@ -14,17 +15,20 @@ const pages = [
 const nav = document.createElement("nav");
 document.body.prepend(nav);
 
-const ARE_WE_HOME = document.documentElement.classList.contains("home");
-
 for (let p of pages) {
-    let url = p.url;
-    let title = p.title;
+    let fullPath = p.url;
 
-    url = !ARE_WE_HOME && !url.startsWith("http") ? "../" + url : url;
+    // Only add BASE_URL if it is not already included in the path
+    if (isGithubPages && !fullPath.startsWith("/portfolio")) {
+        fullPath = "/portfolio" + fullPath;
+    }
+
+    // Ensure no double slashes
+    fullPath = fullPath.replace(/\/{2,}/g, "/");
 
     const a = document.createElement("a");
-    a.href = url;
-    a.textContent = title;
+    a.href = fullPath;
+    a.textContent = p.title;
 
     a.classList.toggle(
         "current",
@@ -62,7 +66,6 @@ function setColorScheme(theme) {
     localStorage.setItem("theme", theme);
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const themeSelect = document.getElementById("theme-select");
     const savedTheme = localStorage.getItem("theme") || "auto";
@@ -77,20 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 export async function fetchJSON(url) {
     try {
-        // Fetch the JSON file from the given URL
         const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
-            console.log(response)
+            console.log(response);
         }
 
-        const data = await response.json();
-        return data;
-
-
+        return await response.json();
     } catch (error) {
-        console.error('Error fetching or parsing JSON data:', error);
+        console.error("Error fetching or parsing JSON data:", error);
     }
 }
 
@@ -98,11 +97,11 @@ export async function fetchGithubData(username) {
     return fetchJSON(`https://api.github.com/users/${username}`);
 }
 
-export function renderProjects(project, containerElement, headingLevel = 'h2') {
-    containerElement.innerHTML = '';
+export function renderProjects(project, containerElement, headingLevel = "h2") {
+    containerElement.innerHTML = "";
 
-    project.forEach(item => {
-        const article = document.createElement('article');
+    project.forEach((item) => {
+        const article = document.createElement("article");
         article.innerHTML = `
             <${headingLevel}>${item.title}</${headingLevel}>
             <img src="${item.image}" alt="${item.title}">
@@ -112,6 +111,4 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
 
         containerElement.appendChild(article);
     });
-
-    
 }
