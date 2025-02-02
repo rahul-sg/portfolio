@@ -1,5 +1,6 @@
 console.log("IT'S ALIVE!");
 
+// Detect if the site is running on GitHub Pages
 const isGithubPages = location.hostname === "rahul-sg.github.io";
 const BASE_URL = isGithubPages ? "/portfolio" : ""; // No trailing slash
 
@@ -18,13 +19,10 @@ document.body.prepend(nav);
 for (let p of pages) {
     let fullPath = p.url;
 
-    // Only add BASE_URL if it is not already included in the path
-    if (isGithubPages && !fullPath.startsWith("/portfolio")) {
-        fullPath = "/portfolio" + fullPath;
+    // Ensure BASE_URL is only prepended on GitHub Pages and not duplicated
+    if (isGithubPages && !fullPath.startsWith(BASE_URL) && !fullPath.startsWith("http")) {
+        fullPath = BASE_URL + fullPath;
     }
-
-    // Ensure no double slashes
-    fullPath = fullPath.replace(/\/{2,}/g, "/");
 
     const a = document.createElement("a");
     a.href = fullPath;
