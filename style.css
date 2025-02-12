@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: 'Roboto', system-ui, sans-serif;
+  font-family: 'Georgia', system-ui, serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: Canvas;
@@ -44,7 +44,7 @@ nav a {
   color: inherit;
   text-align: center;
   padding: 0.5em 1em;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Georgia', serif;
   font-size: 1rem;
   font-weight: 500;
   transition: background-color 0.3s ease, border-bottom 0.3s ease;
@@ -154,49 +154,57 @@ button:hover {
   gap: 1em;
 }
 
-.projects article {
-  display: grid;
-  gap: 1em;
-  border: 1px solid var(--border-color);
+.project-card {
+  max-width: 300px;
+  padding: 16px;
   border-radius: 8px;
-  padding: 1em;
-  background-color: Canvas;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: "Georgia", serif;
+  font-variant-numeric: oldstyle-nums
 }
 
-.projects img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 1em;
-}
-
-.projects h2 {
+.project-title {
   font-size: 1.2em;
-  margin: 0;
-  color: var(--color-accent);
-}
-
-.projects p {
-  font-size: 1em;
-  color: CanvasText;
-}
-
-.projects article:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.projects a {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
   font-weight: bold;
-  color: var(--color-accent);
-  text-decoration: none;
+  color: #0056b3;
+  margin-bottom: 8px;
 }
 
-.projects a:hover {
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.project-description {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85em;
+  margin-top: 8px;
+}
+
+.project-year {
+  margin: 0;
+  color: #555;
+  font-style: italic;
+}
+
+.project-link {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
   text-decoration: underline;
 }
 
@@ -230,9 +238,108 @@ button:hover {
   font-weight: bold;
 }
 
-/* Style for numbers (dd) */
 #profile-stats dd {
   font-size: 1.8em;
   font-weight: bold;
   margin-top: 5px;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  flex-wrap: nowrap;
+}
+
+#projects-plot {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+}
+
+#projects-plot path {
+  transition: opacity 300ms ease-in-out, fill 200ms ease-in-out;
+  cursor: pointer;
+}
+
+#projects-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(75% 55% 30) !important;
+}
+
+path.selected {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: color-mix(in oklch, var(--border-color), canvas 80%);
+  list-style: none;
+  min-width: 150px;
+  max-width: 200px;
+  color: CanvasText;
+  flex-grow: 1;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: inherit;
+}
+
+.legend .swatch {
+  width: 12px;
+  height: 12px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: var(--color);
+  flex-shrink: 0;
+}
+
+.legend em {
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.legend .selected {
+  font-weight: bold;
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.search-container {
+  margin-bottom: 1.5em;
+}
+
+path.selected {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+
+#projects-plot:has(path.selected) path:not(.selected) {
+  filter: brightness(60%);
 }

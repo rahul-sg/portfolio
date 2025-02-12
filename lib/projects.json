@@ -3,32 +3,84 @@
         "title": "Recipes.com Analysis",
         "image": "https://www.mango.org/wp-content/themes/mango-child/css/img/recipe-header-mobile.png",
         "description": "Developed a recipe recommendation model based on cook time, achieving 72.5% accuracy. Conducted hyperparameter tuning, improving accuracy by 6.5%.",
-        "link": "https://rahul-sg.github.io/recipes-ratings-analysis"
+        "link": "https://rahul-sg.github.io/recipes-ratings-analysis",
+        "year": 2024
     },
     {
         "title": "FortuNBA Projections",
         "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
         "description": "Built an NBA player statistics prediction tool using K-Nearest-Neighbors, achieving a prediction accuracy of 65% within +/- 7.5% of actual stats.",
-        "link": "https://github.com/rahul-sg/FortuNBA"
+        "link": "https://github.com/rahul-sg/FortuNBA",
+        "year": 2023
     },
     {
-        "title": "Asperiores rem repellendus doloremque.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolore tenetur odio suscipit exercitationem."
+        "title": "AI-Powered City Construction Review",
+        "image": "https://static.wixstatic.com/media/595e71_4fcb57daf3a54cd5ac547da1c0179f67~mv2.jpg/v1/fit/w_2500,h_1330,al_c/595e71_4fcb57daf3a54cd5ac547da1c0179f67~mv2.jpg",
+        "description": "Developed AI-generated checklists to streamline city construction plan-checking by 50%. Built front-end and back-end solutions for AI-powered review.",
+        "link": "https://www.figma.com/design/BgohYRAfidILQ7o908WPPY/CITMIT?node-id=0-1&t=so3Qz6e7WWjqj6oP-1",
+        "year": 2024
     },
     {
-        "title": "Laudantium reprehenderit placeat perspiciatis.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Et nemo consectetur consequatur expedita."
+        "title": "Emergency AI Health Monitoring System",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Developed an AI-powered health monitoring system with 99.2% accuracy for emergency detection in assisted living, improving response times by 94%.",
+        "link": "https://github.com/rahul-sg/emergency-ai-health-monitor",
+        "year": 2023
     },
     {
-        "title": "Consequuntur autem eos facere.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Suscipit vero labore consequatur doloribus."
+        "title": "Geo-Spatial Data Analysis for Business Expansion",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Analyzed geospatial data to optimize business expansion strategies. Used probabilistic modeling to identify high-potential locations for new stores.",
+        "link": "https://github.com/rahul-sg/geospatial-business-analysis",
+        "year": 2024
     },
     {
-        "title": "Quos sint quaerat omnis?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Aut magnam ex, quis deserunt!"
+        "title": "Cryptocurrency Market Analysis Dashboard",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Developed a dashboard for cryptocurrency market analysis using PowerBI and Python. Provided insights on price trends, volatility, and market shifts.",
+        "link": "https://github.com/rahul-sg/crypto-market-dashboard",
+        "year": 2024
+    },
+    {
+        "title": "Real-Time Stock Price Prediction",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Built a machine learning model using LSTMs to predict stock prices based on historical market data. Achieved 82% prediction accuracy.",
+        "link": "https://github.com/rahul-sg/stock-prediction",
+        "year": 2023
+    },
+    {
+        "title": "AI-Powered Resume Parser",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Developed an AI-based resume parser using NLP techniques to extract skills, experience, and qualifications for automated HR screening.",
+        "link": "https://github.com/rahul-sg/resume-parser",
+        "year": 2024
+    },
+    {
+        "title": "Automated Flight Data Analysis",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Designed a database schema and analysis pipeline for flight data, improving query efficiency for airlines by 35%.",
+        "link": "https://github.com/rahul-sg/flight-data-analysis",
+        "year": 2025
+    },
+    {
+        "title": "AI Chatbot for Customer Support",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Created a chatbot using LangChain and ChatGPT APIs for automated customer support, reducing manual support workload by 60%.",
+        "link": "https://github.com/rahul-sg/chatbot-support",
+        "year": 2024
+    },
+    {
+        "title": "Personal Finance AI Assistant",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Built an AI assistant that analyzes user spending patterns and suggests optimized budgets using probabilistic modeling.",
+        "link": "https://github.com/rahul-sg/finance-ai-assistant",
+        "year": 2024
+    },
+    {
+        "title": "Interactive Data Visualization Dashboard",
+        "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png",
+        "description": "Developed a dashboard using Tableau and PowerBI to visualize business analytics and detect trends in real-time data.",
+        "link": "https://github.com/rahul-sg/data-viz-dashboard",
+        "year": 2024
     }
 ]
